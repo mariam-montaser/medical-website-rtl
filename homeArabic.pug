@@ -1,0 +1,141 @@
+doctype
+html(lang="ar" dir='rtl')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title ALGLUCOSE
+        //for reset
+        link(rel='stylesheet' href='css/normalize.css')
+        //for grid
+        link(rel='stylesheet' href='css/grid.css')
+        //for style
+        link(rel='stylesheet' href='css/main.css')
+        
+    body
+        block navbar
+            //start nav bar
+            nav
+                .container
+                    .logo
+                        img(src="images/capture.png", alt="logo")
+                    ul.unstyle(class="links upper hidden-xs")
+                        block links
+                            li.active
+                                a(href='homeArabic.html') الرئيسية
+                            li
+                                a(href='#') عن الشركة
+                            li
+                                a(href='#') تواصل معنا
+                            li
+                                a(href='index.html') اللغة الانجليزية
+                    .toggler
+                        span
+                        span
+                        span
+        block page-content
+            //start header
+            header
+                #arrowLeft(class='arrow hidden-xs')
+                .slider
+                    .slide(class='slide1') 
+                        .slide-content
+                            span أجهزة قياس السكر
+                    .slide(class='slide2') 
+                        .slide-content
+                            span أقلام وشكاكات
+                    .slide(class='slide3') 
+                        .slide-content
+                            span فرش طبي
+                    .slide(class='slide4') 
+                        .slide-content
+                            span فرش طبي
+                    .slide(class='slide5') 
+                        .slide-content
+                            span مستلزمات السكر
+                #arrowRight(class='arrow hidden-xs')
+            
+            //start about section
+            section(class="center about padding")
+                .container
+                    h1.upper الجلوكوز
+                    p Al Glucose is founded to being the first reference to diabetes people all over the world covering medical consultation, Patient experience, Long term lifestyle program, Awareness programs,Researches, online community, and online shop Contains all medical and non-medical supplies that need for diabetes people.
+
+            //start description section
+            div(class="desc center padding")
+                .container
+                    p Increase awareness and implement lifestyle programs to prevent and cure diabetes and to improve the lives of all people affected by diabetes. As we are committed to supporting you and your family in every step of your journey with diabetes.
+            
+            // start catigories section
+            section(class="catigories padding center")
+                .container
+                    h2.upper(class='h1') منتجاتنا
+                    .row
+                        div(class="col-lg-4 col-sm-6")
+                            div(class="items Test-Strips") 
+                                a(href="teststrips.html" target="_blank" title="Show products in category Test Strips")
+                                    img(class="img-responsive center-block" src="images/Strips/on%20call%20plus.jpg")
+                                h3
+                                    a(href="Test Strips.html" title="Show products in category Test Strips") شرائط السكر
+                            
+                        div(class="col-lg-4 col-sm-6")
+                            div(class="items Glucose Meters")
+                                a(href="Test%20Strips.html" target="_blank" title="Show products in category Glucose Meters")
+                                    img(class="img-responsive center-block" src="images/glucose-meters.jpeg")
+                                h3
+                                    a(href="Test Strips.html" title="Show products in category Glucose Meters") اجهزة قياس السكر
+                        
+                        div(class="col-lg-4 col-sm-6")
+                            div(class="items incontivence-supplies") 
+                                a(href="Test%20Strips.html" target="_blank" title="Show products in category incontivence supplies")
+                                    img(class="img-responsive center-block" src="images/suppliment.jpeg")
+                                h3
+                                    a(href="Test Strips.html" title="Show products in category incontivence supplies") امدادات
+
+                        div(class="col-lg-4 col-sm-6")
+                            div(class="items socks-footwear") 
+                                a(href="Test%20Strips.html" target="_blank" title="Show products in category socks & footwear")
+                                    img(class="img-responsive center-block" src="images/vitamins.jpeg")
+                                h3
+                                    a(href="Test Strips.html" title="Show products in category socks & footwear") فيتامينات
+
+                        div(class="col-lg-4 col-sm-6")
+                            div(class="items travel-back")
+                                a(href="Test%20Strips.html" target="_blank" title="Show products in category travel back")
+                                    img(class="img-responsive center-block" src="images/travel.jpeg")
+                                h3
+                                    a(href="Test Strips.html" title="Show products in category travel back") لوازم السفر
+
+                        div(class="col-lg-4 col-sm-6")
+                            div(class="items Test-Strips")
+                                a(href="Test%20Strips.html" target="_blank" title="Show products in category Test Strips")
+                                    img(class="img-responsive center-block" src="images/Strips/on%20call%20plus.jpg")
+                                h3
+                                    a(href="Test Strips.html" title="Show products in category Test Strips") شرائط السكر
+        block contact
+            // start contact
+            section(class="contact padding center")
+                h2.upper.h1 اتصل بنا
+                p يمكنك التواصل معنا
+                .boxes
+                    div
+                        <span>البريد الالكتروني:</span> mousa@gmail.com
+                    div
+                        <span>الهاتف:</span> 123456789
+                    div
+                        <span>العنوان:</span> القاهرة.مصر
+        block co-logo
+            //copmany logo
+            .co-logo(class='center padding')
+                .container
+                    img( src='images/capture.png')
+        block footer
+            //start footer
+            footer(class="center") 
+                p Copyright&copy; 2018 Al Glucose.
+                p Design By <i><a href='http://mariammontaser.com'>MARIAM</a></i>.  
+
+            // go to up button
+            .top
+                .arrow-up            
+        script(src='js/main.js')

@@ -1,0 +1,304 @@
+@import 'helper';
+
+// variables
+
+// start navbar
+nav{
+    //overflow: hidden;
+    position: fixed;
+    width: 100%;
+    //height: 75px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: $backgroundColor;
+    border-bottom: 2px solid #ccc;
+    .container{
+        display: flex;
+        //flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: flex-start;
+        align-items: flex-start;
+        .logo{
+            img{
+                width: 200px;
+                height: 70px;
+            }
+            
+        }
+        .links{
+            li{
+    
+                display: block;
+                margin: 11px;
+                color: $darkColor;
+                font-size: 20px;
+                cursor: pointer;
+                @media #{$minSmall}{
+                    display: inline-block;
+                }
+                &.active a, &:hover a{
+                    color: $lightColor;
+                }
+            }
+        }
+    }
+}
+
+//end navbar
+
+// start header & slider
+body, header, .slider, .slide-content{
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    position: relative;
+    .arrow{
+        position: absolute;
+        top: 50%;
+        margin-top: -40px;
+        width: 0;
+        height: 0;
+        border-style: solid; 
+    }
+    #arrowLeft{
+        border-width: 40px 40px 40px 40px;
+        border-color: transparent $backgroundColor transparent transparent;
+        left: 0;
+        margin-left: 30px
+    }
+    #arrowRight{
+        border-width: 40px 40px 40px 40px;
+        border-color: transparent transparent transparent $backgroundColor;
+        right: 0;
+        margin-right: 30px
+    }
+    .slider{
+        .slide{
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            .slide-content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                span{
+                    font-size: 5rem;
+                    color: #fff;
+                    background-color: rgba(#009CAC, .3);
+                    padding: 10px 20px;
+                }
+            }
+        }
+        .slide1{
+            background-image: url(../images/slider/1.jpg)
+        }
+        .slide2{
+            background-image: url(../images/slider/2.jpg)
+        }
+        .slide3{
+            background-image: url(../images/slider/3.jpg)
+        }
+        .slide4{
+            background-image: url(../images/slider/4.jpg)
+        }
+        .slide5{
+            background-image: url(../images/slider/5.jpg)
+        }
+    }
+    
+}
+// end header & slider
+
+// start about
+
+// end about
+
+//start description
+.desc{
+    background-color: $darkColor;
+    p{
+        color: $backgroundColor;
+        width: 70%;
+        font-style: italic;
+        margin: auto;
+    }
+    
+}
+
+//end description
+
+// start categories
+.catigories{
+    .items{
+        margin-bottom: 50px;
+        border: 1px solid #ccc;
+        transition: all .5s ease-in-out;
+        &:hover{
+            transform: scale(1.1, 1.1);
+            h3{
+                background-color: $darkColor;
+                
+                a{
+                    
+                    color: $lightColor;
+                }
+            }
+        }
+        a{
+            img{
+                width: 200px;
+                height: 200px
+            }
+        }
+        h3{
+            border-top: 1px solid $darkColor;
+            margin: 0;
+            padding: 15px;
+        }
+    }
+}
+//end categories
+
+// start other pages
+
+hr{
+    margin-top: 40px;
+    color: $lightColor;
+}
+
+//start aside list
+.list{
+    background-color: $darkColor;
+    float: left;
+    width: 22%;
+    margin: 50px 3%;
+    padding: 20px;
+    h2{
+        border-bottom: 2px solid $lightColor;
+        padding-bottom: 20px;
+        color: $backgroundColor;
+    }
+    ul{
+        line-height: 2;
+        li{
+            a{
+                display: inline-block;
+                width: 100%;
+                padding-top: 30px;
+                font-size: 20px;
+                color: #fff;
+                border-bottom: 1px solid $lightColor;
+                transition: all .5s ease-in-out;
+                &:hover{
+                    color: $lightColor;
+                    padding-left: 25px;
+                }
+            }
+            &.active a{
+                color: $lightColor;
+                padding-left: 25px;
+            }
+        }
+    }
+}
+//start aside list
+
+//start products section
+.products{
+    width: 72%;
+    float: left;
+    .item{
+        margin-bottom: 50px;
+        transition: all .3s ease-in;
+        border: 1px solid #fff;
+        &:hover{
+            border-color: #ccc;
+            padding: 5px;
+        }
+        h3{
+            font-size: 24px;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        p{
+            font-size: 16px;
+        }
+        h4{
+            color:$lightColor;
+        }
+    }
+}
+//start products section
+
+//end other pages
+
+//start contact
+.contact{
+    background-color: $darkColor;
+    h2,p,div{
+        color: $backgroundColor;
+        margin-bottom: 10px;
+    }
+    .boxes{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+        justify-content: space-evenly;
+        align-items: center;
+        div{
+            padding: 1.5rem 2rem;
+            margin-bottom: 50px;
+            font-size: 2rem;
+            transition: all 0.5s ease-out;
+            span{color:$lightColor;}
+            &:hover{
+                border: 3px solid #fff;
+                background-color: $lightColor;
+                padding: .5rem 1.5rem;
+                color: $darkColor;
+                span{
+                    color: $darkColor;
+                }
+            }
+        }
+    }
+    
+}
+//end contact
+
+// start co-logo
+.co-logo{
+    img{
+        width: 250px;
+        height: 250px;
+    }
+}
+// end co-logo
+
+// start footer
+footer{
+    background-color: $backgroundColor;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    // @media #{$minLarge}{
+    //     position: fixed;
+    //     bottom: 0;
+    //     left: 0;
+    //     z-index: 2;
+    // }
+    p{
+        font-size: 14px;
+        padding: 5px;
+        margin: 0
+    }
+    
+}
